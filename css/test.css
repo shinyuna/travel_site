@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+input[type=checkbox]{display: none;}
+
+/* 그래프 */
+.bar {
+    width: 200px;
+    height: 10px;
+    background: white;
+    border: 1px solid gray 
+}
+.bar div {
+    width:10px;
+    height:5px;
+    margin-top:2.5px;
+    background: red;
+    animation:bar 3s infinite;
+}
+#stop:checked ~ .bar div{animation-play-state: paused;} 
+
+/* 텍스트 animation */
+h1:before{
+    content: '';
+   animation: text 3s infinite;
+}
+
+/* 가운데로 옮기는 방법 */
+h2{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 4vw;
+}
+
+@keyframes bar {
+    0%{width:0px}
+    100%{width:100%}
+}
+@keyframes text{
+    0%{content:"0"}
+    10%{content:"10"}
+    20%{content:"20"}
+    30%{content:"30"}
+    40%{content:"40"}
+    50%{content:"50"}
+    60%{content:"60"}
+    70%{content:"70"}
+    80%{content:"80"}
+    90%{content:"90"}   
+    100%{content:"100"}    
+}
+
+@media (min-width: 1200px){
+    h2{font-size: 20px}
+}
+
+
+/* HEADER */
+header {background: #000;}
+section.slide {background: pink;}
+footer {background: skyblue;}
+
+
+
